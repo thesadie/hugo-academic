@@ -67,6 +67,12 @@
 - id: btn_download
   translation: Download
 
+- id: btn_app
+  translation: App
+
+- id: btn_docs
+  translation: Documentation
+
 # About widget
 
 - id: interests
@@ -116,6 +122,9 @@
   translation: Book an appointment
 
 # Publication/Talk details
+
+- id: description
+  translation: Description
 
 - id: abstract
   translation: Abstract
