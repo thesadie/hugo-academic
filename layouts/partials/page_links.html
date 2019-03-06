@@ -130,6 +130,28 @@
   DOI
 </a>
 {{ end }}
+{{ with $.Params.url_app }}
+  {{ $resource := $.Resources.GetMatch . }}
+  {{ if $resource }}
+    {{ $link = $resource.RelPermalink }}
+  {{ else }}
+    {{ $link = . | relURL }}
+  {{ end }}
+<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
+  {{ i18n "btn_app" }}
+</a>
+{{ end }}
+{{ with $.Params.url_docs }}
+  {{ $resource := $.Resources.GetMatch . }}
+  {{ if $resource }}
+    {{ $link = $resource.RelPermalink }}
+  {{ else }}
+    {{ $link = . | relURL }}
+  {{ end }}
+<a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ $link }}" target="_blank" rel="noopener">
+  {{ i18n "btn_docs" }}
+</a>
+{{ end }}
 {{ range $.Params.url_custom }}
   {{ $pack := or .icon_pack "fas" }}
   {{ $pack_prefix := $pack }}

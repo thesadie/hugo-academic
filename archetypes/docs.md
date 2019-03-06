@@ -13,7 +13,7 @@ toc = true
 # linktitle = "Example"
 
 # Substitute `tutorial` with the name of your tutorials folder.
-[menu.tutorial]
+[menu.tutorials]
   # Define a parent ID if this page is a parent.
   name = "YourParentID"
   
